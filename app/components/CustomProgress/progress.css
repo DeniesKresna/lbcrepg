@@ -1,0 +1,41 @@
+.multicolor-bar {
+	margin: 10px, 10px, 10px, 0px;
+}
+
+.multicolor-bar .values .value {
+	float: left;
+	text-align: center;
+}
+
+.multicolor-bar .scale .graduation {
+	float: left;
+	text-align: center;
+}
+
+.multicolor-bar .bars .bar {
+	float: left;
+	height: 30px;
+	border-radius: 0;
+}
+
+.multicolor-bar .legends {
+	text-align: center;
+}
+
+
+.multicolor-bar .legends .legend {
+    display: inline-block;
+	width: 30%;
+    margin: 0px;
+    text-align: left;
+}
+
+.antprogressdot {
+	font-size: 20px;
+	vertical-align: middle;
+}
+
+.antprogresslabel {
+	margin-left: 2px;
+	vertical-align: middle;
+}

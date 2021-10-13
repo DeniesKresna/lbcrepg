@@ -1,0 +1,62 @@
+{
+    "id":547,
+    "user":{
+       "id":549,
+       "username":"faysal+test1@leadbook.com",
+       "email":"faysal+test1@leadbook.com",
+       "first_name":"test",
+       "last_name":"test",
+       "is_active":true,
+       "is_superuser":false,
+       "email_verified":true,
+       "credits":{
+          "id":955,
+          "reference":"faysal+test1@leadbook.com-549's credit account",
+          "account_type":"User",
+          "balance":"0.00",
+          "status":"Open"
+       }
+    },
+    "client":{
+       "id":340,
+       "name":"Leadbook Pte Ltd",
+       "workspace":"test1",
+       "contact_volume_balance":585000,
+       "total_users_covered":10,
+       "current_users_size":6,
+       "is_enterprise":true,
+       "credits":{
+          "id":349,
+          "reference":"Leadbook Pte Ltd-340's credit account",
+          "account_type":"Client",
+          "balance":"1009.50",
+          "status":"Open"
+       },
+       "contact_unlock_cost":2.0,
+       "company_unlock_cost":1.0,
+       "email_delivery_cost":0.05,
+       "contact_opened_cost":10.0,
+       "contact_clicked_cost":10.0,
+       "contact_volume_exported":2492,
+       "hours":{
+          "id":353,
+          "reference":"Leadbook Pte Ltd-340's hour account",
+          "account_type":"Client",
+          "balance":"0.00",
+          "status":"Open"
+       },
+       "onboarding_training":{
+          "id":353,
+          "reference":"Leadbook Pte Ltd-340's onboarding training account",
+          "account_type":"Client",
+          "balance":"0.00",
+          "status":"Open"
+       }
+    },
+    "phone_number":"+8801917147618",
+    "designation":"Software Engineer",
+    "timezone":"UTC",
+    "created_at":"2020-03-04T02:36:33.400877Z",
+    "updated_at":"2020-03-11T23:27:40.392223Z",
+    "mat_user_id":17
+ }

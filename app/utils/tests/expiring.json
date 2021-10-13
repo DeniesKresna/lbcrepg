@@ -1,0 +1,52 @@
+{
+    "count":201,
+    "next":"http://orchid-staging.leadbook.com/api/v1/credits/expiring/?client_id=302&page=2&page_size=3",
+    "previous":null,
+    "results":[
+       {
+          "id":4656,
+          "transaction_details":{
+             "id":2328,
+             "reference":"20210914081946-HALOI",
+             "transaction_type":"Credits purchased",
+             "description":"Purchase credits",
+             "parent":null,
+             "amount":"625.00",
+             "created_at":"2021-09-14T08:19:46.437109Z",
+             "expire_date":"2022-09-14T08:19:46.437109Z",
+             "is_expired":false
+          },
+          "amount":"625.00"
+       },
+       {
+          "id":4624,
+          "transaction_details":{
+             "id":2312,
+             "reference":"20210908085310-EBNXV",
+             "transaction_type":"Manual adjustment by Leadbook Admin",
+             "description":"free usage cap increase",
+             "parent":null,
+             "amount":"100.00",
+             "created_at":"2021-09-08T08:53:10.494107Z",
+             "expire_date":"2022-09-08T08:53:10.494107Z",
+             "is_expired":false
+          },
+          "amount":"100.00"
+       },
+       {
+          "id":4618,
+          "transaction_details":{
+             "id":2309,
+             "reference":"20210903052644-GWYQJ",
+             "transaction_type":"Credits purchased",
+             "description":"Purchase credits",
+             "parent":null,
+             "amount":"631.00",
+             "created_at":"2021-09-03T05:26:44.974663Z",
+             "expire_date":"2022-09-03T05:26:44.974663Z",
+             "is_expired":false
+          },
+          "amount":"631.00"
+       }
+    ]
+ }
