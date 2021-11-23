@@ -193,27 +193,27 @@ export function CreditPage({
 
   const progressData = [
     {
-      name: 'Rent list',
+      name: 'Rent contact lists',
       value: usage.type.data_rent.toFixed(2),
       color: 'blue'
     },
     {
-      name: 'Data Services',
+      name: 'Data services',
       value: usage.type.data_service.toFixed(2),
       color: 'purple'
     },
     {
-      name: 'Purchase list',
+      name: 'Purchase contact lists',
       value: usage.type.data_purchase.toFixed(2),
       color: 'orange'
     },
     {
-      name: 'Campaign Services',
+      name: 'Campaign services',
       value: usage.type.campaign_service.toFixed(2),
       color: 'yellow'
     },
     {
-      name: 'Email Verification',
+      name: 'Email verification',
       value: usage.type.data_verification.toFixed(2),
       color: '#6ab04c'
     },
@@ -252,7 +252,7 @@ export function CreditPage({
         title: 'Reference',
         dataIndex: 'reference'
       },{
-        title: 'Performed By',
+        title: 'Performed by',
         dataIndex: 'performedBy'
       },{
         title: 'Transaction Description',
@@ -299,9 +299,9 @@ export function CreditPage({
                     <Col span={12}>
                       { profileLoading? <Spin /> : 
                         <div>
-                          <Text>Current Credit Balance</Text>
+                          <Text>Current credit balance</Text>
                           <Title level={3} style={{margin: 0}}>{profileBalance()}</Title>
-                          <Text type="secondary">{lastPurchased.length? "Last Purchase on " + lastPurchased:""}</Text>
+                          <Text type="secondary">{lastPurchased.length? "Last purchase on " + lastPurchased:""}</Text>
                         </div>
                       }
                     </Col>
@@ -309,7 +309,7 @@ export function CreditPage({
                       <div style={{centering}}>
                         <ButtonContainer>
                           <Button type="text" size="large" onClick={clickAddCredits} >
-                            Add Credits
+                            + Buy Credits
                           </Button>
                         </ButtonContainer>
                       </div>
@@ -321,7 +321,7 @@ export function CreditPage({
                     <Col span={24}>
                       { expiringLoading? <Spin /> : 
                         <div>
-                          <div style={{textAlign: "center"}}><b>Credit expiring soon</b></div>
+                          <div style={{textAlign: "center"}}><b>Credits expiring soon</b></div>
                           <Table columns={creditExpiring.columns} dataSource={creditExpiring.data} size="small" pagination={false} />
                           <div style={{textAlign: "center", marginTop: "10px"}}><a onClick={showCreditExpiringModal}>See all</a></div>
 
@@ -357,74 +357,50 @@ export function CreditPage({
                   <div style={{textAlign: "center"}}><Title level={4}>How to spend credits</Title></div>
                   <Row>
                     <Col span={12}>
-                      <Row>
+                      <Row style={{marginTop: "20px"}}>
                         <Col>
                           <Image src={require('../../assets/images/cart.png')} width={40} />
                         </Col>
                         <Col style={{paddingLeft: "8px"}}>
-                          <div><strong><a href="/s/new-audience">Purchase list &gt;</a></strong></div>
-                          <div><b>1 credit</b>/contact</div>
+                          <div><strong><a href="/s/new-audience">Purchase contact lists &gt;</a></strong></div>
+                          <div><b>1 credit</b> / contact</div>
                         </Col>
                       </Row>
                       <Row style={{marginTop: "20px"}}>
-                        <Col>
-                          <Image src={require('../../assets/images/inbox.png')} width={40} />
-                        </Col>
-                        <Col style={{paddingLeft: "8px"}}>
-                          <div><strong><a href="/s/contacts">Email verification &gt;</a></strong></div>
-                          <div><b>0.03 credits</b>/email</div>
-                        </Col>
-                      </Row>
-                      <Row style={{marginTop: "20px"}}>
-                        <Col>
-                          <Image src={require('../../assets/images/rent.png')} width={40} />
-                        </Col>
-                        <Col style={{paddingLeft: "8px"}}>
-                          <div><strong><a href="/s/new-audience">Rent list &gt;</a></strong></div>
-                          <div><b>0.5 credits</b>/contact/year</div>
-                        </Col>
-                      </Row>
-                    </Col>
-                    <Col span={12}>
-                      <Row>
-                        <Col>
-                          <Image src={require('../../assets/images/cart.png')} width={40} />
-                        </Col>
-                        <Col style={{paddingLeft: "8px"}}>
-                          <div><strong><a href="mailto:support@leadbook.com">Campaign services &gt;</a></strong></div>
-                          <div><b>110 credits</b>/hour</div>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <div>
-                          <small>Get help from a Leadbook Email Specialist to <br />create and set up emails, forms, landing <br/> pages and more.</small>
-                        </div>
-                      </Row>
-                      <Row style={{marginTop: "10px"}}>
-                        <Col>
-                          <Button href="mailto:support@leadbook.com"><Text>Request Campaign Services</Text></Button>
-                        </Col>
-                      </Row>
-                      <Row style={{marginTop: "14px"}}>
                         <Col>
                           <Image src={require('../../assets/images/telegram.png')} width={40} />
                         </Col>
                         <Col style={{paddingLeft: "8px"}}>
                           <div><strong><a href="mailto:support@leadbook.com">Data services &gt;</a></strong></div>
-                          <div><b>110 credits</b>/hour</div>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <div>
-                          <small>For custom data requests like additional <br />data fields. data enrichments, list cleansing,<br/> ABS search, list matching and more.</small>
-                        </div>
-                      </Row>
-                      <Row style={{marginTop: "10px"}}>
-                        <Col>
-                          <Button href="mailto:support@leadbook.com"><Text>Request Data Services</Text></Button>
+                          <div><b>110 credits</b> / hour</div>
                         </Col>
                       </Row>
                     </Col>
+                    <Col span={12}>
+                      <Row style={{marginTop: "20px"}}>
+                        <Col>
+                          <Image src={require('../../assets/images/inbox.png')} width={40} />
+                        </Col>
+                        <Col style={{paddingLeft: "8px"}}>
+                          <div><strong><a href="/s/contacts">Verify emails on-demand &gt;</a></strong></div>
+                          <div><b>0.03 credits</b> / email</div>
+                        </Col>
+                      </Row>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col span={24}>
+                        <Row>
+                          <div>
+                            <small>For custom data requests like additional data fields. data enrichments, list cleansing, ABS search, list matching and more.</small>
+                          </div>
+                        </Row>
+                        <Row style={{marginTop: "10px"}}>
+                          <Col>
+                            <Button href="mailto:support@leadbook.com"><Text>Request Data Services</Text></Button>
+                          </Col>
+                        </Row>
+                      </Col>
                   </Row>
                 </Card>
               </Col>
@@ -432,7 +408,7 @@ export function CreditPage({
           </Col>
         </Row>
         <Row style={{paddingLeft: "24px"}}>
-          <b>Past credit usage</b>
+          <b>Past credits usage</b>
         </Row>
         { usageLoading? <Spin /> : 
         <Row>
@@ -443,14 +419,14 @@ export function CreditPage({
                   
                       <Col span={11}>
                         <Card style={{textAlign: "center", paddingBottom: "73px"}}>
-                          <div><b>Credit used this month</b></div>
+                          <div><b>Credits used this month</b></div>
                           <Title level={3} style={{margin: 0}}>{usage.last_month}</Title>
                           <Text type="secondary">credits</Text>
                         </Card>
                       </Col>
                       <Col span={11}>
                         <Card style={{textAlign: "center", paddingBottom: "73px"}}>
-                          <div><b>Credit used in last 3 months</b></div>
+                          <div><b>Credits used in last 3 months</b></div>
                           <Title level={3} style={{margin: 0}}>{usage.last_three_month}</Title>
                           <Text type="secondary">credits</Text>
                         </Card>
@@ -463,7 +439,7 @@ export function CreditPage({
             <Row style={{padding: "24px"}}>
                   <Col span={24}>
                     <Card>
-                      <div><b>Credit usage by type</b></div>
+                      <div><b>Credits usage by type</b></div>
                       {totalProgress() > 0?
                         <div style={{textAlign: "center"}}><CustomProgress progressData={progressData}/></div> : 
                         <div>No Data</div>
@@ -475,7 +451,7 @@ export function CreditPage({
         </Row>
         }
         <Row style={{paddingLeft: "24px"}}>
-          <b>Credit History</b>
+          <b>Credits history</b>
         </Row>
         { historyLoading? <Spin /> : 
           <Row style={{padding: "24px"}}>
